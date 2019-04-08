@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <RelativeLayout
+
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="208dp"
+            android:layout_height="308dp"
+            android:id="@+id/messagelayout"
+            android:background="@drawable/backgroundleft">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="300dp"
+                    android:scaleType="center"
+                    android:src="@color/colorAccent"
+                    android:id="@+id/messageimage"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="number"
+                    android:padding="12dp"
+                    android:layout_centerInParent="true"
+                    android:textColor="#fff"
+                    android:textSize="30sp"
+                    android:id="@+id/numberofimages"/>
+                <TextView
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/messageimage"
+                    android:layout_alignTop="@+id/messageimage"
+                    android:text="%50"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    />
+                <ImageView
+                    android:id="@+id/seen"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignEnd="@+id/messageimage"
+                    android:layout_alignBottom="@+id/messageimage"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/ic_deleverd"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="seen"
+            android:visibility="gone"
+            android:id="@+id/text_seen"
+            android:layout_below="@id/messagelayout"
+            android:layout_marginEnd="8dp"
+            />
+
+    </RelativeLayout>
+
+ </RelativeLayout>
+
+

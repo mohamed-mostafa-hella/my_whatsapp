@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e6e5"
+    tools:context=".chatActivity">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/messagelist"
+        android:layout_above="@id/messegelayout"
+        />
+
+    <include
+        layout="@layout/toolbarlayout"
+        android:id="@+id/toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/messegelayout"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imglist"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageButton
+                android:id="@+id/media"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/ic_remove_circle_black_24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_perm_media_black_24dp"
+                />
+
+            <EditText
+                android:id="@+id/messege"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/send"
+                android:layout_toRightOf="@id/media"
+                android:background="@drawable/roundedittext"
+                android:hint="message..."
+                android:maxHeight="50dp"
+                android:minHeight="50dp"
+                android:padding="10dp"/>
+
+            <ImageButton
+                android:id="@+id/send"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="7dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_remove_circle_black_24dp"
+                android:src="@drawable/ic_send_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
